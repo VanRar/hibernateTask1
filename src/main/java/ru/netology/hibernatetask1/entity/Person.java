@@ -13,7 +13,7 @@ import javax.persistence.Entity;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@Entity(name = "Persons")
+@Entity(name = "persons")
 public class Person {
 
     @EmbeddedId
