@@ -1,7 +1,7 @@
 package ru.netology.hibernatetask1.repository;
 
 import org.springframework.stereotype.Repository;
-import ru.netology.hibernatetask1.entity.Person;
+import ru.netology.hibernatetask1.entity.Persons;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -13,10 +13,11 @@ public class PersonsRepository {
     @PersistenceContext
     private EntityManager entityManager;
 
-    public List<Person> getPersonsByCity(String city){
-        Query query = entityManager.createQuery("SELECT * FROM netology.persons where city_of_living = 'MOSCOW'", Person.class);
+    public List<Persons> getPersonsByCity(String city){
+        Query query = entityManager.createQuery("SELECT p FROM Persons p where p.cityOfLiving = :city", Persons.class);
         query.setParameter("city", city);
         var result = query.getResultList();
+        //result.forEach(System.out::println);
 
         return result;
 

@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import ru.netology.hibernatetask1.Service.PersonService;
-import ru.netology.hibernatetask1.entity.Person;
+import ru.netology.hibernatetask1.entity.Persons;
 
 import java.util.List;
 
@@ -19,7 +19,7 @@ public class PersonsController {
     }
 
     @GetMapping("/persons/by-city")
-    public List<Person> getPersonsByCity(@RequestParam("city") String city){
+    public List<Persons> getPersonsByCity(@RequestParam("city") String city){
         return personService.getPersonsByCity(city);
 
     }

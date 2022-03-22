@@ -13,8 +13,8 @@ import javax.persistence.Entity;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@Entity(name = "persons")
-public class Person {
+@Entity
+public class Persons {
 
     @EmbeddedId
     private PersonId personId;
