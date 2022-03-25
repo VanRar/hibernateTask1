@@ -18,20 +18,20 @@ public class PersonsRepository {
         return findPersonsJpaRepository.findByCityOfLiving(city);
     }
 
-    public List<Persons> getPersonsByAge(int age){
-        return findPersonsJpaRepository.findByPersonId_Age(age);
-    }
+//    public List<Persons> getPersonsByAge(int age){
+//        return findPersonsJpaRepository.findByPersonId_Age(age);
+//    }
 
     public List<Persons> findByPersonIdAgeLessThan(int age){
         return findPersonsJpaRepository.findByPersonIdAgeLessThan(age);
     }
 
-    public List<Persons> getPersonsByAgeAndSort(int age){
-        return findPersonsJpaRepository.findPersonsByPersonId_AgeAfterAndOrderByPersonId_Age(age);
-    }
+//    public List<Persons> getPersonsByAgeAndSort(int age){
+//        return findPersonsJpaRepository.findPersonsByPersonId_AgeAfterAndOrderByPersonId_Age(age);
+//    }
 
     public Optional<Persons> getPersonsByNameAndSurname(String name, String surname){
-        return findPersonsJpaRepository.findByPersonId_NameAndPersonId_Surname(name, surname);
+        return findPersonsJpaRepository.findByPersonIdNameAndPersonIdSurname(name, surname);
     }
 
 

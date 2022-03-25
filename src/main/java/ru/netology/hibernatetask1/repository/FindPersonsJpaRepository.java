@@ -10,10 +10,8 @@ import java.util.Optional;
 public interface FindPersonsJpaRepository extends JpaRepository<Persons, PersonId> {
 
     List<Persons> findByCityOfLiving(String city);
-    List<Persons> findByPersonId_Age(int age);
     List<Persons> findByPersonIdAgeLessThan(int age);
-    List<Persons> findPersonsByPersonId_AgeAfterAndOrderByPersonId_Age(int age);
-    Optional<Persons> findByPersonId_NameAndPersonId_Surname(String name, String surname);
+    Optional<Persons> findByPersonIdNameAndPersonIdSurname(String name, String surname);
 
 
 }
